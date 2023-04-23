@@ -1,0 +1,498 @@
+@import url(fonts.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb  {
+    background: #41A28E;
+    border-radius: 5px;
+}
+
+body {
+    font-family: "Playfair";
+}
+
+.box {
+    width: 80%;
+    background: blue;
+    margin: 100px auto;
+    height: 200px;
+    position: relative;
+}
+
+.item {
+    background: red;
+    width: 100px;
+    height: 100px;
+    /* left: 50px; */
+    position: relative;
+    position: absolute;
+    position: fixed;
+    right: 50px;
+    /* bottom: 50px; */
+    /* top: 50px; */
+    bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.nav {
+    padding: 25px 0;
+}
+
+.nav__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu__link {
+    margin: 0 20px;
+    font-size: 12px;
+    padding: 12px 0;
+    display: block;
+}
+
+.dropdown {
+    position: absolute;
+    left: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 2px;
+    min-width: 160px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu__dropdown:hover .dropdown {
+    opacity: 1;
+}
+
+.menu__dropdown:hover .menu__icon {
+    transform: rotate(180deg);
+}
+
+.menu__icon {
+    transition: 0.5s;
+}
+
+.menu__dropdown {
+    position: relative;
+}
+
+.dropdown__link {
+    padding: 12px 30px;
+    display: block;
+    font-size: 12px;
+    position: relative;
+}
+
+.dropdown__link::after {
+    content: '';
+    width: 100%;
+    background: #E5E5E5;
+    height: 1px;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+li:last-of-type .dropdown__link::after {
+    display: none;
+}
+
+.nav__input {
+    border: 1px solid #41A28E;
+    outline: none;
+    padding: 6px 12px;
+    font-family: "Roboto";
+    font-size: 14px;
+    max-width: 180px;
+    width: 100%;
+}
+
+.nav__input::placeholder {
+    color: #4B4848;
+}
+
+.nav__btn {
+    width: 28px;
+    /* height: 28px; */
+    background: #41A28E;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 4px;
+    font-size: 14px;
+}
+
+.nav__form {
+    display: flex;
+}
+
+.nav__burger {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #fff;
+    background: #41A28E;
+    padding: 10px;
+    display: none;
+}
+
+.header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__content {
+    background: url(../img/header-bg.jpg) no-repeat center / cover;
+    flex-grow: 1;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header__title {
+    font-size: 50px;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 17px 61px;
+    margin-bottom: 30px;
+}
+
+.header__desc {
+    font-size: 22px;
+    margin-bottom: 50px;
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.38);
+    /* text-shadow: 0px 0px 5px blue;
+    box-shadow: inset 0 0 5px 10px green; */
+}
+
+.header__link {
+    padding: 22px 34px;
+    background: #fff;
+    color: #000;
+    font-size: 12px;
+    transition: 0.5s;
+}
+
+.header__link:hover {
+    background: #41A28E;
+    color: #fff;
+}
+
+.com {
+    padding-top: 48px;
+    padding-bottom: 72px;
+}
+
+.com__card {
+    border: 1px solid #41A28E;
+    max-width: 255px;
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    position: relative;
+}
+
+.com__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.com__title {
+    position: absolute;
+    left: 0;
+    bottom: -50%;
+    background: rgba(75, 72, 72, 0.7);
+    width: 100%;
+    padding: 2px;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.com__card:hover .com__title {
+    bottom: 0;
+}
+
+.com__contnet {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 52px;
+}
+
+.info {
+    text-align: center;
+    max-width: 496px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.info__title {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.info__desc {
+    font-family: "Roboto";
+    color: #666666;
+}
+
+.project {
+    background-image: url(../img/jacket.jpg);
+    padding-top: 120px;
+    padding-bottom: 112px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.project__desc {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.project__title {
+    font-size: 50px;
+    margin-bottom: 22px;
+    font-weight: 400;
+}
+
+.project__link {
+    padding: 23px 42px;
+    color: #000;
+    background: #fff;
+    font-size: 12px;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+.project__link:hover {
+    background: #41A28E;
+    color: #fff;
+}
+
+.custom {
+    padding: 50px 0;
+}
+
+.custom__card {
+    max-width: 255px;
+    width: 100%;
+}
+
+.custom__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.custom__wrapper {
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom__service {
+    position: absolute;
+    bottom: -50%;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 16px 20px;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.custom__card:hover .custom__service {
+    bottom: 0;
+}
+
+.custom__add {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.custom__add img {
+    margin-right: 15px;
+}
+
+.custom__like {
+    margin-right: 23px;
+}
+
+.custom__info {
+    position: absolute;
+    top: 0;
+    background: #4B484B;
+    font-size: 12px;
+    color: #fff;
+    padding: 10px 18px;
+    font-family: "Roboto";
+}
+
+.custom__title {
+    margin-top: 43px;
+    margin-bottom: 6px;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.custom__price {
+    font-size: 18px;
+    font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
+}
+
+.custom__sale {
+    color: #666666;
+    text-decoration: line-through;
+    margin-right: 15px;
+}
+
+.custom__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.footer {
+    background: #000;
+    color: #fff;
+    padding-top: 36px;
+    font-family: "Roboto";
+}
+
+.footer__card {
+    max-width: 255px;
+    width: 100%;
+}
+
+.footer__title {
+    font-family: "Playfair";
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.footer__link {
+    font-size: 14px;
+    padding: 10px 0;
+    display: block;
+}
+
+.footer__link_my {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer__link_my i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.footer__input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 14px 10px;
+    max-width: 200px;
+    width: 100%;
+    font-family: "Roboto";
+}
+
+.footer__input::placeholder {
+    color: #909090;
+}
+
+.footer__btn {
+    background: #41A28E;
+    border: none;
+    outline: none;
+    padding: 12px 10px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Roboto";
+}
+
+.footer__form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.footer__desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer__service {
+    display: flex;
+}
+
+.footer__pay {
+    margin-right: 25px;
+    font-size: 30px;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__design {
+    background: #121212;
+    color: #666666;
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    margin-top: 36px;
+}
+
+.footer__name {
+    text-shadow: 0px 0px 4px #E52D27;
+}

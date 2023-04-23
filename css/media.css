@@ -1,0 +1,162 @@
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .header__content {
+        padding: 20px;
+    }
+    
+    .com__card, .custom__card, .footer__card {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    
+    .custom__title, .footer__title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .nav__burger {
+        display: block;
+        order: 1;
+    }
+    
+    .menu {
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        background: #fff;
+        flex-direction: column;
+        min-width: 200px;
+        transform: scaleY(0);
+        transition: 0.5s;
+        transform-origin: 50% 0;
+    }
+    
+    .nav__burger:focus ~ .menu {
+        transform: scaleY(1);
+    }
+    
+    .nav {
+        position: relative;
+    }
+    
+    .header__title, .info__title, .project__title {
+        font-size: 40px;
+    }
+    
+    .com__contnet, .custom__content, .footer__content {
+        flex-wrap: wrap;
+    }
+    
+    .com__card, .custom__card, .footer__card {
+        margin-bottom: 30px;
+    }
+        
+    .custom__title {
+        margin-top: 15px;
+    }
+    
+    .footer__title {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .com__card, .custom__card, .footer__card {
+        margin-right: 0;
+        margin-left: 0;
+        max-width: 240px;
+    }
+    
+    .com__contnet {
+        margin-bottom: 20px;
+    }
+    
+    .com {
+        padding-bottom: 50px;
+    }
+    
+    .project {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .custom__content {
+        margin-top: 40px;
+    }
+    
+    .custom {
+        padding-bottom: 20px;
+    }
+    
+    .footer__design {
+        margin-top: 10px;
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 540px) {
+    .nav__content {
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .header__content, .project {
+        text-align: center;
+    }
+    
+    .header__title, .info__title, .project__title {
+        font-size: 30px;
+    }
+    
+    .com__contnet, .custom__content, .footer__content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .com__card, .custom__card, .footer__card {
+        max-width: 255px;
+        text-align: center;
+    }
+    
+    .project__link {
+        padding: 15px 23px;
+    }
+    
+    .footer__link_my {
+        justify-content: center;
+    }
+    
+    .footer__service {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer__pay {
+        margin: 0 12px 20px 12px;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 300px) {
+    .nav__form {
+        max-width: 180px;
+    }
+}
